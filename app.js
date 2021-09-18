@@ -216,6 +216,7 @@ if (num1 > num2 && num1 > num3) {
 
 //--12
 /* var vuelto;
+var vuelto;
 var precioCerveza = 50;
 var precioJugo = 30;
 var precioAgua = 15;
@@ -225,31 +226,31 @@ var bebida = prompt("Ingrese el número de bebida que desea ordenar: 1-cerveza  
 bebida = parseInt(bebida);
 var pago = prompt("¿Con cúanto a pagar?");
 pago = parseInt(pago);
-if (edad < 18) {
-    if(bebida == 1){
+if (edad < 18 ) {
+    if(bebida == 1 ){
         alert("Usted no puede ingerir bebidas alcohólicas")
-    }else if(bebida == 2){
+    }else if(bebida == 2 && pago > precioJugo){
         vuelto = pago - precioJugo;
-        alert("Su vuelto es de " + vuelto);
-    }else if(bebida == 3){
+        alert("El costo de la bebida es " + precioJugo + ", su vuelto es de " + vuelto);
+    }else if(bebida == 3 && pago > precioAgua){
         vuelto = pago - precioAgua;
-        alert("Su vuelto es de " + vuelto);
+        alert("El costo de la bebida es " + precioAgua + ", su vuelto es de " + vuelto);
     }else{
-        alert("Ingrese un número válido");
+        alert("No tiene suficiente dinero para realizar la compra");
     }
 
 } else if(edad >= 18){
-    if(bebida == 1){
+    if(bebida == 1 && pago > precioCerveza){
         vuelto = pago - precioCerveza;
-        alert("Su vuelto es de " + vuelto);
-    }else if(bebida == 2){
+        alert("El costo de la bebida es " + precioCerveza + ", su vuelto es de " + vuelto);
+    }else if(bebida == 2 && pago > precioJugo){
         vuelto = pago - precioJugo;
-        alert("Su vuelto es de " + vuelto);
-    }else if(bebida == 3){
+        alert("El costo de la bebida es " + precioJugo + ", su vuelto es de " + vuelto);
+    }else if(bebida == 3 && pago > precioAgua){
         vuelto = pago - precioAgua;
-        alert("Su vuelto es de " + vuelto);
+        alert("El costo de la bebida es " + precioAgua + ", su vuelto es de " + vuelto);
     }else{
-        alert("Ingrese un número válido");
+        alert("No tiene suficiente dinero para realizar la compra");
     }
 }else{
     alert("Ingrese una edad válida");
